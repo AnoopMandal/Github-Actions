@@ -6,16 +6,15 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: changing directory
+            - name: get code
+              uses: actions/checkout@v3
+            - name: install dependencies
               run: |
                 DIR=$(pwd)
                 echo "$DIR"
                 ls -lrt
                 cd "/home/runner/work/Github-Actions/Github-Actions/basics/"
-            - name: get code
-              uses: actions/checkout@v3
-            - name: install dependencies
-              run: npm ci
+                npm ci
             - name: lint
               run: npm run lint
             - name: test code
