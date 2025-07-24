@@ -7,8 +7,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: changing directory
-              run: pwd
-              run: cd "~/Github-Actions/basics/"
+              run: |
+                pwd
+                cd "~/Github-Actions/basics/"
             - name: get code
               uses: actions/checkout@v3
             - name: install dependencies
