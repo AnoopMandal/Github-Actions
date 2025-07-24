@@ -8,7 +8,7 @@ jobs:
         steps:
             - name: changing directory
               run: |
-                DIR=pwd
+                DIR=$(pwd)
                 echo "$DIR"
                 cd "/home/runner/work/Github-Actions/Github-Actions/basics/"
             - name: get code
