@@ -9,7 +9,7 @@ jobs:
             - name: changing directory
               run: |
                 pwd
-                cd "~/Github-Actions/basics/"
+                cd "/home/runner/work/Github-Actions/Github-Actions/basics/"
             - name: get code
               uses: actions/checkout@v3
             - name: install dependencies
