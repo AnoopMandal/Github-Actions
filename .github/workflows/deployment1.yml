@@ -6,6 +6,8 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
+            - name: changing directory
+              run: cd "/basics/"
             - name: get code
               uses: actions/checkout@v3
             - name: install dependencies
