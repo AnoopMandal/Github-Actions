@@ -16,9 +16,27 @@ jobs:
                 cd "/home/runner/work/Github-Actions/Github-Actions/basics/"
                 npm ci
             - name: lint
-              run: npm run lint
+              run: |
+                DIR=$(pwd)
+                echo "$DIR"
+                ls -lrt
+                cd "/home/runner/work/Github-Actions/Github-Actions/basics/"
+                pwd
+                npm run lint
             - name: test code
-              run: npm run test
+              run: |
+                DIR=$(pwd)
+                echo "$DIR"
+                ls -lrt
+                cd "/home/runner/work/Github-Actions/Github-Actions/basics/"
+                pwd
+                npm run test
             - name: build code
-              run: npm run build
+              run: |
+                DIR=$(pwd)
+                echo "$DIR"
+                ls -lrt
+                cd "/home/runner/work/Github-Actions/Github-Actions/basics/"
+                pwd
+                npm run build
             
