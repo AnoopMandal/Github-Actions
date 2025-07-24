@@ -10,6 +10,7 @@ jobs:
               run: |
                 DIR=$(pwd)
                 echo "$DIR"
+                ls -lrt
                 cd "/home/runner/work/Github-Actions/Github-Actions/basics/"
             - name: get code
               uses: actions/checkout@v3
